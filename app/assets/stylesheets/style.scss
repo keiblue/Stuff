@@ -1,9 +1,4 @@
-.mono{
-  text-decoration: none;
-  display: inline-block;
-  width: 50%;
-  height: 30px;
-}
+
 nav a {
   color: red;
   text-decoration: none;
@@ -15,4 +10,9 @@ nav .logo{
 }
 body {
   background-color: #5A9DD6;
+  padding: 10px 20px;
+}
+
+.no-padding {
+  padding: 0;
 }
