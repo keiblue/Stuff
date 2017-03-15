@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Market</title>
+    <title>ChoroStore</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <a href="#"><img src="https://scontent.fscl3-1.fna.fbcdn.net/v/t1.0-1/p200x200/16640673_985017418298768_6735879098055262724_n.png?oh=5692627c3295fe21977c787cfff158a0&oe=59251F21" alt="logo" class="logo"></a>
+        </div>
+        <div class="col-md-8">
+          <ul class="mono btn">
+            <li class="mono"><a href="#">link1</a></li>
+            <li class="mono"><a href="#">link2</a></li>
+            <li class="mono"><a href="#">link3</a></li>
+            <li class="mono"><a href="#">link4</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
+    <footer class="col-lg-12 center text-center">
+      <p> hola chicos C: </p>
+    </footer>
   </body>
+
 </html>
