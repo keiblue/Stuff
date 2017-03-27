@@ -4,6 +4,11 @@ nav a {
   text-decoration: none;
 
 }
+nav li {
+  height: 30px;
+  background-color: #34b7ea;
+  width: 100%;
+}
 nav {
   background-color: #458b74;
 }
@@ -20,6 +25,14 @@ footer {
   bottom: -1000px;
   height: 0px;
   width: 0px
+}
+aside li {
+  height: 60px;
+  background-color: #feffbc;
+  width: 100%;
+}
+aside ul{
+  padding: 0;
 }
 
 .no-padding {
