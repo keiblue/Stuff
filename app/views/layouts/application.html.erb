@@ -9,18 +9,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <div class="container-fluid">
+  <div class="container-fluid no-padding">
     <nav>
-      <div class="col-md-12">
-        <div class="col-md-2">
-          <a href="#"><img src="https://scontent.fscl3-1.fna.fbcdn.net/v/t1.0-1/p200x200/16640673_985017418298768_6735879098055262724_n.png?oh=5692627c3295fe21977c787cfff158a0&oe=59251F21" alt="logo" class="logo"></a>
+      <div class="col-md-12 no-padding">
+        <div class="col-md-2 no-padding">
+          <a href="#"><img src="/images/logo2.png" alt="logo" class="logo"></a>
+          <!--<a href="#"><img src="https://scontent.fscl3-1.fna.fbcdn.net/v/t1.0-1/p200x200/16640673_985017418298768_6735879098055262724_n.png?oh=5692627c3295fe21977c787cfff158a0&oe=59251F21" alt="logo" class="logo"></a>-->
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 no-padding">
           <ul class="col-md-12 no-padding row">
-            <li class="btn col-md-3"><a href="#">link1</a></li>
+            <li class="btn col-md-3 col-md-offset-1"><a href="#">link1</a></li>
             <li class="btn col-md-3"><a href="#">link2</a></li>
             <li class="btn col-md-3"><a href="#">link3</a></li>
-            <li class="btn col-md-3"><a href="#">link4</a></li>
+            <li class="btn col-md-1 "><%= link_to 'Login', new_user_path %></li>
+            <li class="btn col-md-1"><%= link_to 'New User', new_user_path %></li>
           </ul>
         </div>
       </div>

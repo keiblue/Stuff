@@ -1,0 +1,53 @@
+/* line 2, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav a {
+  color: red;
+  text-decoration: none;
+}
+
+/* line 7, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav li {
+  height: 30px;
+  background-color: #34b7ea;
+  width: 100%;
+}
+
+/* line 12, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav {
+  background-color: #458b74;
+}
+
+/* line 15, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav .logo {
+  max-height: 30px;
+}
+
+/* line 19, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+body {
+  background-color: #c2eafe;
+  padding: 10px 20px;
+}
+
+/* line 23, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+footer {
+  position: absolute;
+  bottom: -1000px;
+  height: 0px;
+  width: 0px;
+}
+
+/* line 29, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+aside li {
+  height: 60px;
+  background-color: #feffbc;
+  width: 100%;
+}
+
+/* line 34, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+aside ul {
+  padding: 0;
+}
+
+/* line 38, C:/Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+.no-padding {
+  padding: 0;
+}
