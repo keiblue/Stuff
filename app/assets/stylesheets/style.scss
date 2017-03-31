@@ -1,20 +1,24 @@
 
 nav a {
-  color: red;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: sans-serif;
   text-decoration: none;
 
 }
+.navmenu{
+  top: 15px;
+}
+aside {
+  margin-top: 30px;
+}
 nav li {
-  height: 30px;
-  background-color: #34b7ea;
+  height: 50px;
+  background-color: #8BC53D;
   width: 100%;
 }
 nav {
   background-color: #458b74;
-}
-nav .logo{
-  max-height: 30px;
-
 }
 body {
   background-color: #eeffdd;
