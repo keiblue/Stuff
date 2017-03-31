@@ -38,7 +38,17 @@ aside li {
 aside ul{
   padding: 0;
 }
-
+.form-control{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  display: block;
+  padding: 10px 0px;
+  font-size: 1.2em;
+}
+.form-text{
+  font-size: 12px;
+}
 .no-padding {
   padding: 0;
 }
