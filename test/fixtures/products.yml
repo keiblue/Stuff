@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  desc_corta: MyString
+  desc: MyText
+  precio: 1.5
+  tipo: MyString
+  marca: MyString
+  modelo: MyString
+  stock: 1
+
+two:
+  titulo: MyString
+  desc_corta: MyString
+  desc: MyText
+  precio: 1.5
+  tipo: MyString
+  marca: MyString
+  modelo: MyString
+  stock: 1

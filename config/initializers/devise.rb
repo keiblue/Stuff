@@ -274,4 +274,21 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+    module DevisePermittedParameters
+    extend ActiveSupport::Concern
+
+      included do
+        before_filter :configure_permitted_parameters
+      end
+
+      protected
+
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(:sign_up, keys:[:name, :ZipCode, :PhoneNumber, :address, :Birthday, :LastName, :NickName, :avatar]) 
+        devise_parameter_sanitizer.permit(:account_update, keys: [:name, :ZipCode, :PhoneNumber, :address, :Birthday, :LastName, :NickName, :avatar]) 
+        
+      end
+    end
+    DeviseController.send :include, DevisePermittedParameters
 end

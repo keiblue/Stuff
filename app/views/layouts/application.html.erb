@@ -13,7 +13,7 @@
     <nav>
       <div class="col-md-12 no-padding">
         <div class="col-md-2 col-sm-10 no-padding">
-          <a href="#"><img class="img-responsive"src="/images/logo2.png" alt="logo" class="logo"></a>
+          <%= link_to image_tag("/images/logo2.png", class: "img-responsive") , root_path%>
           <!--<a href="#"><img src="https://scontent.fscl3-1.fna.fbcdn.net/v/t1.0-1/p200x200/16640673_985017418298768_6735879098055262724_n.png?oh=5692627c3295fe21977c787cfff158a0&oe=59251F21" alt="logo" class="logo"></a>-->
         </div>
         <div class="col-md-10 col-sm-2 no-padding navmenu">
@@ -21,8 +21,12 @@
             <li class="btn col-md-3 col-md-offset-1"><%= link_to 'Quienes Somos', root_path %></li>
             <li class="btn col-md-3"><%= link_to 'Catalogo', root_path %></li>
             <li class="btn col-md-3"><%= link_to 'Contacto', root_path %></li>
-            <li class="btn col-md-1 "><%= link_to 'Login', root_path %></li>
-            <li class="btn col-md-1"><%= link_to 'New User', root_path %></li>
+            <% unless user_signed_in? %> 
+            <li class="btn col-md-1 "><%= link_to 'Login', new_user_session_path %></li>
+            <li class="btn col-md-1"><%= link_to 'New User', new_user_registration_path %></li>
+            <% else %>
+            <li class="btn col-md-2 "><%= link_to 'LogOut', destroy_user_session_path , :method => :delete %></li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -30,11 +34,12 @@
     <aside class="col-md-2">
       <div class="row">
         <ul>
-          <li class="btn"><%= link_to 'Aniversarios', root_path %></li>
-          <li class="btn"><%= link_to 'Nacimientos', root_path %></li>
-          <li class="btn"><%= link_to 'Cumpleaños', root_path %></li>
-          <li class="btn"><%= link_to 'Bodas/Novios', root_path %></li>
-          <li class="btn"><%= link_to 'Condolencias', root_path %></li>
+
+        <% @Categories.each do |category| %>
+          <li class="btn">
+            <%= link_to category.name_category, category %> 
+          </li>
+        <% end %>
         </ul>
       </div>
     </aside>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @category.name_category %></h1>
+
+<div class="col-md-4">
+	<% @category.products.each do |product| %>
+		<div class="field">
+			<%= link_to image_tag(product.picture.url, class: "img-responsive"), product %>
+		</div>
+		<div class="field">
+			<%=  link_to product.titulo ,product %>
+		</div>
+		<div class="field">
+			<%= link_to product.desc ,product ,class: "link_to" %>
+		</div>
+	<%end%>
+
+<!--<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %> -->

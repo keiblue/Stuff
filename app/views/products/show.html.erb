@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @product.titulo %>
+</p>
+
+<p>
+  <strong>Desc corta:</strong>
+  <%= @product.desc_corta %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @product.desc %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @product.precio %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @product.tipo %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @product.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @product.modelo %>
+</p>
+
+<p>
+  <strong>picture:</strong>
+  <%=image_tag @product.picture.url %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @product.stock %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
