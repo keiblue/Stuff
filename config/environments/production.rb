@@ -28,7 +28,7 @@ Rails.application.configure do
   config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
-    bucket: ENV.fetch('keiliabs-test'),
+    bucket: ENV.fetch('keilabs-test'),
     access_key_id: ENV.fetch('AKIAJ7UVUBUUJB6MO5AQ'),
     secret_access_key: ENV.fetch('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'),
     s3_region: ENV.fetch('sa-east-1'),
