@@ -6,7 +6,9 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
   end
-
+  def all
+    @categories = Category.all
+  end
   # GET /categories/1
   # GET /categories/1.json
   def show

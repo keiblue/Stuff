@@ -1,0 +1,15 @@
+
+<% @categories.each do |category|%>
+  <h2><%= category.name_category %></h2>
+  <div class="row">
+      <% category.products.each do |product| %>
+          <%= link_to  product,class: 'col-md-4' do %>
+            <%= image_tag(product.picture.url('medium'), class: "img-responsive") %>
+            <p><%= product.titulo %></p>
+            <p><%= product.desc_corta %></p>
+          <%end%>
+        
+      <%end%>
+  </div>
+
+<% end %>

@@ -3,55 +3,66 @@
   <head>
     <title>ChoroStore</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Mono:300,300i,400,400i,500,500i,700,700i|Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <div class="container-fluid no-padding">
-    <nav>
-      <div class="col-md-12 no-padding">
-        <div class="col-md-2 col-sm-10 no-padding">
-          <%= link_to image_tag("/images/logo2.png", class: "img-responsive") , root_path%>
-          <!--<a href="#"><img src="https://scontent.fscl3-1.fna.fbcdn.net/v/t1.0-1/p200x200/16640673_985017418298768_6735879098055262724_n.png?oh=5692627c3295fe21977c787cfff158a0&oe=59251F21" alt="logo" class="logo"></a>-->
-        </div>
-        <div class="col-md-10 col-sm-2 no-padding navmenu">
-          <ul class="col-md-12 no-padding row">
-            <li class="btn col-md-3 col-md-offset-1"><%= link_to 'Quienes Somos', root_path %></li>
-            <li class="btn col-md-3"><%= link_to 'Catalogo', root_path %></li>
-            <li class="btn col-md-3"><%= link_to 'Contacto', root_path %></li>
-            <% unless user_signed_in? %> 
-            <li class="btn col-md-1 "><%= link_to 'Login', new_user_session_path %></li>
-            <li class="btn col-md-1"><%= link_to 'New User', new_user_registration_path %></li>
-            <% else %>
-            <li class="btn col-md-2 "><%= link_to 'LogOut', destroy_user_session_path , :method => :delete %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <aside class="col-md-2">
-      <div class="row">
-        <ul>
+    <div class="container-fluid no-padding">
+      <header>
+        <%= link_to image_tag("/images/logo2.png", class: "img-responsive") , root_path , class: "set-logo"%>
+        <nav>
+          <%= link_to info_path, :class => 'btn-nav' do %>
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="hide-on-small-mobile ml-3">Quienes Somos</span>
+          <% end %>
+          <%= link_to all_path, :class => 'btn-nav' do %>
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="hide-on-small-mobile ml-3">Catalogo</span>
+          <% end %>
 
-        <% @Categories.each do |category| %>
-          <li class="btn">
-            <%= link_to category.name_category, category %> 
-          </li>
-        <% end %>
+          <%= link_to contact_path, :class => 'btn-nav' do %>
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="hide-on-small-mobile ml-3">Contacto</span>
+          <% end %>
+
+          <% unless user_signed_in? %>
+            <%= link_to new_user_session_path, :class => 'btn-nav' do %>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span class="hide-on-small-mobile ml-3">Log In</span>
+            <% end %>
+            <%= link_to new_user_registration_path, :class => 'btn-nav' do %>
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              <span class="hide-on-small-mobile ml-3">New User</span>
+            <% end %>
+          <% else %>
+            <%= link_to destroy_user_session_path, :class =>  'btn-nav', :method => :delete do %>
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+              <span class="hide-on-small-mobile ml-3">Log Out</span>
+            <% end %>
+          <%end%>
+        </nav>
+      </header>
+      <aside >
+        <ul >
+          <% @Categories.each do |category| %>
+          <li><%= link_to category.name_category, category, class:'btn' %></li>
+          <% end %>
         </ul>
-      </div>
-    </aside>
-    <div class="col-md-10">
+      </aside>
+      <div class="content-col">
+        <%= yield %>
         <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
-    <footer class="col-lg-12 center text-center">
-      <p> Keilabs ®2017</p>
-    </footer>
+        <p class="alert"><%= alert %></p>
+      </div>
   </div>
+  <footer class=" col-md-12 center text-center">
+    <div class="">
+      <p> Keilabs ®2017</p>
+    </div>
+  </footer>
   </body>
 
 </html>
