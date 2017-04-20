@@ -1,0 +1,138 @@
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Mono', monospace;
+*/
+/* line 9, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+body {
+  background-color: #eeffdd;
+  line-height: 1.6;
+  font-family: 'roboto', sans-serif, sans-serif;
+  font-rendering: optimizelegibility;
+  font-size: 13px;
+  cursor: default;
+  color: #303138;
+}
+
+/* line 18, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+body header {
+  background-color: #eeffdd;
+  color: #FF8768;
+  padding: 11px 11px 14px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  z-index: 900;
+}
+
+/* line 32, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+body header .set-logo {
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+}
+
+/* line 37, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav {
+  padding: 35px 0px;
+}
+
+/* line 40, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+nav a {
+  color: #ffffff;
+  font-size: 15px !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 45, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+aside {
+  width: 250px;
+  position: fixed;
+  top: 120px;
+  z-index: 820;
+  height: 100%;
+  overflow: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  padding-left: 16px;
+}
+
+/* line 62, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+aside ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* line 66, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+aside a {
+  height: 50px;
+  background-color: #feffbc;
+  width: 100%;
+  color: #ffffff;
+  font-size: 20px !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 77, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+footer {
+  position: absolute;
+}
+
+/* line 80, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+.content-col {
+  margin-left: 265px;
+  margin-top: 120px;
+  margin-right: 11px;
+  padding: 15px;
+  background-color: #cbfecf;
+}
+
+/* line 87, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+.btn-nav {
+  background: #FF8768;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  -webkit-appearance: none;
+  text-decoration: none !important;
+  padding: .4em 1em;
+  max-width: 100%;
+  -webkit-transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+/* line 102, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+.btn {
+  background: #ff8768;
+  border-radius: 10px;
+  color: #fff !important;
+  font-weight: bold;
+  border: 0;
+  -webkit-appearance: none;
+  text-decoration: none !important;
+  padding: 5% 10%;
+  max-width: 100%;
+  -webkit-transition: .25s;
+  transition: .25s;
+  margin-bottom: 5px;
+}
+
+/* line 119, /Users/kei/Documents/Heroku/chorostore/app/assets/stylesheets/style.scss */
+.no-padding {
+  padding: 0;
+}
