@@ -11,7 +11,7 @@ class User < ApplicationRecord
       :storage => :s3,
       :path => "/images/users/user_:user_id/:style/avatar.:extension"
  )
-  validates_attachment_content_type :imagen, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png)$/, :message => 'file type is not allowed (only jpeg/png/jpg images)'
-  validates_attachment_size :imagen, :in => 0.megabytes..1.megabytes
+  validates_attachment_content_type :avatar, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png)$/, :message => 'file type is not allowed (only jpeg/png/jpg images)'
+  validates_attachment_size :avatar, :in => 0.megabytes..1.megabytes
 
 end

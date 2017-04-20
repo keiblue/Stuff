@@ -7,7 +7,7 @@ class Product < ApplicationRecord
       :storage => :s3,
       :path => "/images/products/product_:product_id/:style/product.:extension"
  )
-  validates_attachment_content_type :imagen, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png)$/, :message => 'file type is not allowed (only jpeg/png/jpg images)'
+  validates_attachment_content_type :picture, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png)$/, :message => 'file type is not allowed (only jpeg/png/jpg images)'
 
 
  	def categories=(value)
