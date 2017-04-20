@@ -11,6 +11,9 @@ class User < ApplicationRecord
       :storage => :s3,
       :path => "/images/users/user_:user_id/:style/avatar.:extension"
  )
+  Paperclip.interpolates :user_id  do |attachment, style|
+    attachment.instance.id
+  end
   validates_attachment_content_type :avatar, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png)$/, :message => 'file type is not allowed (only jpeg/png/jpg images)'
   validates_attachment_size :avatar, :in => 0.megabytes..1.megabytes
 
