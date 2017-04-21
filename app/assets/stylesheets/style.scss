@@ -115,6 +115,43 @@ footer {
   margin-bottom: 5px;
 }
 
+.product-img{
+  border: 0px solid #000;
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  max-height: 325px;
+  text-align: center;
+  margin: auto 0;
+  padding: 1em;
+  overflow: hidden;
+}
+.product-img img{
+  margin: auto;
+  max-height: 300px;
+  max-width: 250px;
+}
+.product-detail{
+  vertical-align: top;
+  display: inline-block;
+  max-width: 493px;
+  height: 350px;
+  padding-top: 1em;
+}
+.product-detail h1, .product-title{
+  margin: 5px 0px 0px 0px;
+  font-size: 1.25em;
+  max-width: 510px;
+}
+.cat-link{
+  text-decoration: none;
+  color: grey;
+  cursor: auto;
+}
+.product-desc{
+  font-size: 1em;
+}
+
 .no-padding {
   padding: 0;
 }

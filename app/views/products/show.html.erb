@@ -1,49 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @product.titulo %>
-</p>
+  <div class="row product-img">
+    <span>
+        <%=image_tag @product.picture.url,class: 'img-responsive' %>
+    </span>
+  </div>
+  <div class="product-detail">
+    <h1 class="product-title"><%= @product.titulo %> </h1>
 
-<p>
-  <strong>Desc corta:</strong>
-  <%= @product.desc_corta %>
-</p>
+    <% @product.categories.each do |cat| %>
+      <i><%= link_to  cat.name_category ,cat ,class: 'cat-link' %></i>
+    <%end%>
+    <p class="product-desc"><%= @product.desc %></p>
+    <p> Valor: <%= @product.precio %> - Disponibles: <%= @product.stock %></p>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @product.desc %>
-</p>
-
-<p>
-  <strong>Precio:</strong>
-  <%= @product.precio %>
-</p>
-
-<p>
-  <strong>Tipo:</strong>
-  <%= @product.tipo %>
-</p>
-
-<p>
-  <strong>Marca:</strong>
-  <%= @product.marca %>
-</p>
-
-<p>
-  <strong>Modelo:</strong>
-  <%= @product.modelo %>
-</p>
-
-<p>
-  <strong>picture:</strong>
-  <%=image_tag @product.picture.url %>
-</p>
-
-<p>
-  <strong>Stock:</strong>
-  <%= @product.stock %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  </div>

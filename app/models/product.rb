@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+	has_many :has_categories
+	has_many :categories, through: :has_categories
 	after_create :save_categories
 
 	has_attached_file(:picture,
