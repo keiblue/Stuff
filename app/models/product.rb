@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 	after_create :save_categories
 	has_attached_file( :picture,
       styles: {medium: "600x400", thumb: "300x200"},
-      default_url: "/images/:style/missing_product.jpg",
+      default_url: "/images/:style/missing_product.png",
       default_style: :medium,
       :storage => :s3,
       :path => "/images/products/product_:product_id/:style/product.:extension"
