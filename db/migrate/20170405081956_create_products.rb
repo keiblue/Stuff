@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string  :titulo,      null: false, default: ""
       t.string  :desc_corta,  default: ""
       t.text    :desc,        default: ""
-      t.float   :precio,      default: ""
+      t.float   :precio,      default: 0
       t.float   :rating,      default: 2.5
       t.string  :tipo,        default: ""
       t.string  :marca,       default: ""
